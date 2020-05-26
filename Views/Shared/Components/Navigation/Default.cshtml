@@ -1,0 +1,58 @@
+﻿<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-action="Index" asp-controller="Home">
+            Početna stranica
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Zaposlenici" ? "active": "")"
+           asp-action="Index" asp-controller="Zaposlenici">
+            Zaposlenici
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Poslovi" ? "active": "")"
+           asp-action="Index" asp-controller="Poslovi">
+          Poslovi
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Usluge" ? "active": "")"
+           asp-action="Index" asp-controller="Usluge">
+           Usluge
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Natjecaji" ? "active": "")"
+           asp-action="Index" asp-controller="Natjecaji">
+           Natjecaji
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Oprema" ? "active": "")"
+           asp-action="Index" asp-controller="Oprema">
+            Oprema
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "Izvjestaji" ? "btn-primary": "")"
+           asp-action="Index" asp-controller="Izvjestaji">
+            Izvještaji
+        </a>
+    </li>
+
+   
+</ul>
