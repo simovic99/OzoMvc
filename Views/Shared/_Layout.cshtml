@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FirmaMvcCore - @ViewData["Title"]</title>
+    <title>OzoMvc - @ViewData["Title"]</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" asp-action="Index" asp-controller="Home">Firma MVC ASP.NET Core</a>
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home">OzoMvc</a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -21,20 +21,29 @@
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <vc:navigation />
-           
         </div>
     </nav>
 
     <main>
         <div>
-       
+            <div id="tempmessage" class="alert"></div>
+            @if (TempData[Constants.Message] != null)
+            {
+                bool error = false;
+                var obj = TempData[Constants.ErrorOccurred];
+                if (obj != null)
+                {
+                    error = (bool)obj;
+                }
+                <div class="alert @(error ? "alert-danger" : "alert-success")">@TempData[Constants.Message]</div>
+            }
         </div>
 
         @RenderBody()
     </main>
     <hr />
     <footer>
-        <p class="text-center">&copy; 2019 - FER/FSRE</p>
+        <p class="text-center">&copy; 2020 - FER/FSRE</p>
     </footer>
 
     <script src="~/lib/jquery/jquery.js"></script>

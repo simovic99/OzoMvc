@@ -18,7 +18,9 @@ namespace OzoMvc.Models
         public double Cijena { get; set; }
         public double Troskovi { get; set; }
 
-        public virtual Usluga Usluga { get; set; }
+        public virtual Usluga UslugaNavigation { get; set; }
+        public virtual Mjesto MjestoNavigation { get; set; }
+             
         public virtual ICollection<PosaoOprema> PosaoOprema { get; set; }
         public virtual ICollection<ZaposlenikPosao> ZaposlenikPosao { get; set; }
     }

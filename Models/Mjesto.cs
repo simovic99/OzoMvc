@@ -17,6 +17,7 @@ namespace OzoMvc.Models
 
         public virtual Grad Grad { get; set; }
         public virtual ICollection<Skladište> Skladište { get; set; }
+        public virtual ICollection<Posao> Posao { get; set; }
         public virtual ICollection<Zaposlenik> Zaposlenik { get; set; }
     }
 }

@@ -317,7 +317,7 @@ namespace OzoMvc.Models
                     .HasColumnName("vrijeme")
                     .HasColumnType("datetime");
 
-                entity.HasOne(d => d.Usluga)
+                entity.HasOne(d => d.UslugaNavigation)
                     .WithMany(p => p.Posao)
                     .HasForeignKey(d => d.UslugaId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
