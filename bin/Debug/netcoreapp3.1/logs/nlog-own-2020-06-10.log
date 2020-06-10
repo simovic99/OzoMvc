@@ -66,3 +66,17 @@
 2020-06-10 20:00:55.8693|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
 2020-06-10 20:04:15.0566|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
 2020-06-10 20:47:23.7674|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 21:57:35.7292|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 21:58:01.9021|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 19 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-10 22:15:39.8746|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:16:11.4217|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 20 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-10 22:22:33.2275|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:29:31.2492|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:40:21.7381|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:41:13.4779|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:44:35.4896|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 22:45:45.0299|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 23:30:17.3520|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 23:37:38.5969|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 23:50:05.1906|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-10 23:58:43.3381|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 

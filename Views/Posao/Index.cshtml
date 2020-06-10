@@ -10,6 +10,9 @@
 <h2>Popis poslova</h2>
 
 <a asp-action="Create">Unos novog posla</a>
+<div class="col-sm-7">
+    <partial name="KriterijPretrage" model="Model.Filter" />
+</div>
 
 <pager page-info="@Model.PagingInfo" page-action="Index" page-title="Unesite željenu stranicu"
        class="float-right">
@@ -19,7 +22,7 @@
     <thead>
         <tr>
             @{
-                string[] nazivi = { "Id", "Usluga", "Mjesto","Cijena", "Troskovi","Datum",};
+                string[] nazivi = { "Id", "Usluga", "Mjesto", "Cijena", "Troskovi", "Datum", "zaposlenici", };
                 for (int i = 1; i <= nazivi.Length; i++)
                 {
                     <th>
@@ -33,16 +36,16 @@
         </tr>
     </thead>
     <tbody>
-        
-            @{
-                ViewDataDictionary vdd = new ViewDataDictionary(this.ViewData);
+
+        @{
+            ViewDataDictionary vdd = new ViewDataDictionary(this.ViewData);
             vdd.Add("PagingInfo", Model.PagingInfo);
-            }
+        }
         @foreach (var posao in Model.Poslovi)
         {
             <partial name="Row" model="posao" view-data="vdd" />
         }
-        
-        
+
+
     </tbody>
 </table>

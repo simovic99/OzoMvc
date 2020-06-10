@@ -12,7 +12,8 @@ namespace OzoMvc.ViewModels
         public virtual ICollection<PosaoOprema> PosaoOprema { get; set; }
         public virtual ICollection<ZaposlenikPosao> ZaposlenikPosao { get; set; }
         public IEnumerable<PosaoViewModel> Poslovi { get; set; }
-       
+        public PosaoFilter Filter { get; set; }
+
         public PagingInfo PagingInfo { get; set; }
     }
 }

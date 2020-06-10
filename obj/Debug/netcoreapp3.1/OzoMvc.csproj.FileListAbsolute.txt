@@ -382,3 +382,9 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosao
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Details.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Edit.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Index.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Create.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Delete.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Details.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Edit.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Index.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs

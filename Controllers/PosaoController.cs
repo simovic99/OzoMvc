@@ -45,7 +45,7 @@ namespace OzoMvc.Controllers
         //}
 
 
-        public IActionResult Index(int page = 1, int sort = 1, bool ascending = true)
+        public IActionResult Index(string filter,int page = 1, int sort = 1, bool ascending = true)
         {
             int pagesize = appData.PageSize;
 
@@ -56,6 +56,7 @@ namespace OzoMvc.Controllers
             var query = ctx.Posao
                         .AsNoTracking();
 
+            var x = ctx.ZaposlenikPosao.Include(z => z.ZaposlenikNavigation);
 
             int count = query.Count();
             if (count == 0)
@@ -64,6 +65,16 @@ namespace OzoMvc.Controllers
                 TempData[Constants.Message] = "Ne postoji niti jedan posao.";
                 TempData[Constants.ErrorOccurred] = false;
                 return RedirectToAction(nameof(Create));
+            }
+           PosaoFilter nf = new PosaoFilter();
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                nf = PosaoFilter.FromString(filter);
+                if (!nf.IsEmpty())
+                {
+
+                    query = nf.Apply(query);
+                }
             }
 
             var pagingInfo = new ViewModels.PagingInfo
@@ -113,8 +124,7 @@ namespace OzoMvc.Controllers
                 MjestoNaziv = p.MjestoNavigation.Naziv,
                 Cijena = p.Cijena,
                 Troskovi = p.Troskovi,
-                
-              
+           
 
             })
                         .Skip((page - 1) * pagesize)
@@ -122,13 +132,18 @@ namespace OzoMvc.Controllers
                         .ToList();
             var model = new PosloviViewModel
             {
+              
                 Poslovi = poslovi,
                 PagingInfo = pagingInfo
             };
 
             return View(model);
         }
-
+        [HttpPost]
+        public IActionResult Filter(PosaoFilter filter)
+        {
+            return RedirectToAction(nameof(Index), new { filter = filter.ToString() });
+        }
         [HttpGet]
         public IActionResult Create()
         {
@@ -161,6 +176,8 @@ namespace OzoMvc.Controllers
             {
                 try
                 {
+
+                                 
                     ctx.Add(posao);
                 
                     ctx.SaveChanges();
@@ -205,10 +222,10 @@ namespace OzoMvc.Controllers
                 }
                 catch (Exception exc)
                 {
-                    TempData[Constants.Message] = "Pogreška prilikom brisanja države: " + exc.CompleteExceptionMessage();
+                    TempData[Constants.Message] = "Pogreška prilikom brisanja posla: " + exc.CompleteExceptionMessage();
                     TempData[Constants.ErrorOccurred] = true;
 
-                    logger.LogError("Pogreška prilikom brisanja države: " + exc.CompleteExceptionMessage());
+                    logger.LogError("Pogreška prilikom brisanja posla: " + exc.CompleteExceptionMessage());
                 }
             }
             else

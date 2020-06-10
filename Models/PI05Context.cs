@@ -210,6 +210,7 @@ namespace OzoMvc.Models
                 entity.Property(e => e.NatjecajId).HasColumnName("natjecaj_id");
 
                 entity.Property(e => e.PonudjivacId).HasColumnName("ponudjivac_id");
+                entity.Property(e => e.CijenaPonude).HasColumnName("cijena_ponude");
 
                 entity.HasOne(d => d.Natjecaj)
                     .WithMany(p => p.NatjecajPonudjivac)
@@ -326,14 +327,14 @@ namespace OzoMvc.Models
                 entity.ToTable("posao_oprema");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id").ValueGeneratedOnAdd();
+                   
 
                 entity.Property(e => e.OpremaId).HasColumnName("oprema_id");
 
                 entity.Property(e => e.PosaoId)
-                    .HasColumnName("posao_id")
-                    .ValueGeneratedOnAdd();
+                    .HasColumnName("posao_id");
+                    
 
                 entity.Property(e => e.Satnica).HasColumnName("satnica");
 

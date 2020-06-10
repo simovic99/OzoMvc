@@ -1026,3 +1026,211 @@ Error Number:4405,State:1,Class:16
 2020-06-10 20:47:24.0700|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
 2020-06-10 20:47:24.0700|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
 2020-06-10 20:47:24.0700|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 21:57:35.7292|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 21:57:36.0714|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 21:57:36.0714|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 21:57:36.0714|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 21:58:01.9021|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 19 dodan. 
+2020-06-10 22:15:39.8746|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:15:40.2249|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:15:40.2282|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:15:40.2282|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:16:11.4217|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 20 dodan. 
+2020-06-10 22:19:21.5933|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (29ms) [Parameters=[@__natjecaj_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [n].[id] AS [Id], [n].[CijenaPonude], [n].[dobiven_natjecaj] AS [DobivenNatjecaj], [p].[naziv] AS [Ponudjivac], [p].[id] AS [PonudjivacId], [n].[natjecaj_id] AS [NatjecajId]
+FROM [natjecaj_ponudjivac] AS [n]
+INNER JOIN [ponudjivaci] AS [p] ON [n].[ponudjivac_id] = [p].[id]
+WHERE [n].[natjecaj_id] = @__natjecaj_Id_0
+ORDER BY [n].[id] 
+2020-06-10 22:19:21.6188|10100|Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred while iterating over the results of a query for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CijenaPonude'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:f38e5f96-9c1d-472a-98a8-6a5e1c680f2a
+Error Number:207,State:1,Class:16 Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:21.6417|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:41.7167|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (21ms) [Parameters=[@__natjecaj_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [n].[id] AS [Id], [n].[CijenaPonude], [n].[dobiven_natjecaj] AS [DobivenNatjecaj], [p].[naziv] AS [Ponudjivac], [p].[id] AS [PonudjivacId], [n].[natjecaj_id] AS [NatjecajId]
+FROM [natjecaj_ponudjivac] AS [n]
+INNER JOIN [ponudjivaci] AS [p] ON [n].[ponudjivac_id] = [p].[id]
+WHERE [n].[natjecaj_id] = @__natjecaj_Id_0
+ORDER BY [n].[id] 
+2020-06-10 22:19:41.7167|10100|Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred while iterating over the results of a query for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CijenaPonude'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:f38e5f96-9c1d-472a-98a8-6a5e1c680f2a
+Error Number:207,State:1,Class:16 Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:41.7167|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:48.7446|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (20ms) [Parameters=[@__natjecaj_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [n].[id] AS [Id], [n].[CijenaPonude], [n].[dobiven_natjecaj] AS [DobivenNatjecaj], [p].[naziv] AS [Ponudjivac], [p].[id] AS [PonudjivacId], [n].[natjecaj_id] AS [NatjecajId]
+FROM [natjecaj_ponudjivac] AS [n]
+INNER JOIN [ponudjivaci] AS [p] ON [n].[ponudjivac_id] = [p].[id]
+WHERE [n].[natjecaj_id] = @__natjecaj_Id_0
+ORDER BY [n].[id] 
+2020-06-10 22:19:48.7446|10100|Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred while iterating over the results of a query for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CijenaPonude'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:f38e5f96-9c1d-472a-98a8-6a5e1c680f2a
+Error Number:207,State:1,Class:16 Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:48.7446|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:53.6740|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (21ms) [Parameters=[@__natjecaj_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [n].[id] AS [Id], [n].[CijenaPonude], [n].[dobiven_natjecaj] AS [DobivenNatjecaj], [p].[naziv] AS [Ponudjivac], [p].[id] AS [PonudjivacId], [n].[natjecaj_id] AS [NatjecajId]
+FROM [natjecaj_ponudjivac] AS [n]
+INNER JOIN [ponudjivaci] AS [p] ON [n].[ponudjivac_id] = [p].[id]
+WHERE [n].[natjecaj_id] = @__natjecaj_Id_0
+ORDER BY [n].[id] 
+2020-06-10 22:19:53.6740|10100|Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred while iterating over the results of a query for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CijenaPonude'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:f38e5f96-9c1d-472a-98a8-6a5e1c680f2a
+Error Number:207,State:1,Class:16 Invalid column name 'CijenaPonude'.
+2020-06-10 22:19:53.6820|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Invalid column name 'CijenaPonude'.
+2020-06-10 22:20:34.3558|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (23ms) [Parameters=[@__natjecaj_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [n].[id] AS [Id], [n].[CijenaPonude], [n].[dobiven_natjecaj] AS [DobivenNatjecaj], [p].[naziv] AS [Ponudjivac], [p].[id] AS [PonudjivacId], [n].[natjecaj_id] AS [NatjecajId]
+FROM [natjecaj_ponudjivac] AS [n]
+INNER JOIN [ponudjivaci] AS [p] ON [n].[ponudjivac_id] = [p].[id]
+WHERE [n].[natjecaj_id] = @__natjecaj_Id_0
+ORDER BY [n].[id] 
+2020-06-10 22:20:34.3694|10100|Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred while iterating over the results of a query for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CijenaPonude'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:f38e5f96-9c1d-472a-98a8-6a5e1c680f2a
+Error Number:207,State:1,Class:16 Invalid column name 'CijenaPonude'.
+2020-06-10 22:20:34.3694|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Invalid column name 'CijenaPonude'.
+2020-06-10 22:22:33.2275|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:22:33.5884|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:22:33.5884|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:22:33.5884|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:29:31.2492|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:29:31.6330|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:29:31.6330|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:29:31.6330|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:30:19.2852|20102|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (57ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [PView] ([Cijena], [Ime], [Inventarni_broj], [Mjesto_id], [Naziv], [Posao_id], [Prezime], [Troskovi], [Usluga_id], [Vrijeme], [Zaposlenik_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [Id]
+FROM [PView]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2020-06-10 22:30:19.3954|10000|Microsoft.EntityFrameworkCore.Update|ERROR|An exception occurred in the database while saving changes for context type 'OzoMvc.Models.PI05Context'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): View or function 'PView' is not updatable because the modification affects multiple base tables.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1757a063-2f4c-4061-be83-469ab684974a
+Error Number:4405,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) An error occurred while updating the entries. See the inner exception for details.
+2020-06-10 22:30:19.4265|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error occurred while updating the entries. See the inner exception for details.
+2020-06-10 22:40:21.7381|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:40:22.1302|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:40:22.1338|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:40:22.1338|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:41:13.4779|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:41:13.8613|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:41:13.8613|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:41:13.8727|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:44:35.4896|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:44:35.8652|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:44:35.8692|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:44:35.8692|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 22:45:45.0299|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 22:45:45.4297|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 22:45:45.4297|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 22:45:45.4297|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 23:30:17.3520|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 23:30:17.7689|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 23:30:17.7689|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 23:30:17.7786|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 23:37:38.5969|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 23:37:39.0306|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 23:37:39.0306|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 23:37:39.0409|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 23:50:05.1906|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 23:50:05.5554|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 23:50:05.5554|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 23:50:05.5554|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-10 23:58:43.3381|0|OzoMvc.Program|DEBUG|init main 
+2020-06-10 23:58:43.6775|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-10 23:58:43.6803|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-10 23:58:43.6803|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 

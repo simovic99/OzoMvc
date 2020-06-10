@@ -18,6 +18,7 @@ namespace OzoMvc.ViewModels
        
         
         public virtual ICollection<ZaposlenikPosao> ZaposlenikPosao { get; set; }
+        public virtual ICollection<PosaoOprema> PosaoOprema { get; set; }
         public virtual Usluga UslugaNavigation { get; set; }
         public virtual Mjesto MjestoNavigation { get; set; }
 
