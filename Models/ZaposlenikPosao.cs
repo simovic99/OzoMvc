@@ -8,9 +8,9 @@ namespace OzoMvc.Models
         public int Id { get; set; }
         public int ZaposlenikId { get; set; }
         public int PosaoId { get; set; }
-        public TimeSpan Satnica { get; set; }
+        public TimeSpan? Satnica { get; set; }
 
         public virtual Posao Posao { get; set; }
-        public virtual Zaposlenik Zaposlenik { get; set; }
+        public virtual Zaposlenik ZaposlenikNavigation { get; set; }
     }
 }

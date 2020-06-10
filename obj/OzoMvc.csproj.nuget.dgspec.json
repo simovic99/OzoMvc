@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pero\\Desktop\\PI_2020\\OzoMvc\\OzoMvc.csproj": {}
+    "C:\\Users\\Pero\\Desktop\\OzoMvc\\OzoMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pero\\Desktop\\PI_2020\\OzoMvc\\OzoMvc.csproj": {
+    "C:\\Users\\Pero\\Desktop\\OzoMvc\\OzoMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pero\\Desktop\\PI_2020\\OzoMvc\\OzoMvc.csproj",
+        "projectUniqueName": "C:\\Users\\Pero\\Desktop\\OzoMvc\\OzoMvc.csproj",
         "projectName": "OzoMvc",
-        "projectPath": "C:\\Users\\Pero\\Desktop\\PI_2020\\OzoMvc\\OzoMvc.csproj",
+        "projectPath": "C:\\Users\\Pero\\Desktop\\OzoMvc\\OzoMvc.csproj",
         "packagesPath": "C:\\Users\\Pero\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pero\\Desktop\\PI_2020\\OzoMvc\\obj\\",
+        "outputPath": "C:\\Users\\Pero\\Desktop\\OzoMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pero\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Lucene.Net": {
+              "target": "Package",
+              "version": "[3.0.3, )"
+            },
+            "Microsoft.CrmSdk.CoreAssemblies": {
+              "target": "Package",
+              "version": "[9.0.2.24, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -48,9 +56,27 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "PdfRpt.Core": {
+              "target": "Package",
+              "version": "[1.4.2, )"
             }
           },
           "imports": [

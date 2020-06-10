@@ -1,19 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace OzoMvc.Models
 {
     public partial class Skladište
     {
-        public Skladište()
-        {
-            Oprema = new HashSet<Oprema>();
-        }
-
         public int Id { get; set; }
         public int MjestoId { get; set; }
 
         public virtual Mjesto Mjesto { get; set; }
+
         public virtual ICollection<Oprema> Oprema { get; set; }
     }
 }

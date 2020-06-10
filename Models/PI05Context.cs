@@ -35,19 +35,16 @@ namespace OzoMvc.Models
         public virtual DbSet<VrstaOpreme> VrstaOpreme { get; set; }
         public virtual DbSet<Zaposlenik> Zaposlenik { get; set; }
         public virtual DbSet<ZaposlenikPosao> ZaposlenikPosao { get; set; }
+        public virtual DbSet<PView> PView { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=rppp.fer.hr,3000;Database=PI-05;User Id=pi05;Password=Li-bero5");
-            }
-        }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CertifikatZaposlenik>(entity =>
+            modelBuilder.Entity<PView>(e => { e.ToView("PView").HasKey(e=>e.Id).HasName("id"); });
+           modelBuilder.Entity<CertifikatZaposlenik>(entity =>
             {
                 entity.ToTable("certifikat_zaposlenik");
 
@@ -58,7 +55,7 @@ namespace OzoMvc.Models
                 entity.Property(e => e.CertifikatId).HasColumnName("certifikat_id");
 
                 entity.Property(e => e.ZaposlenikId).HasColumnName("zaposlenik_id");
-
+               
                 entity.HasOne(d => d.Certifikat)
                     .WithMany(p => p.CertifikatZaposlenik)
                     .HasForeignKey(d => d.CertifikatId)
@@ -317,7 +314,7 @@ namespace OzoMvc.Models
                     .HasColumnName("vrijeme")
                     .HasColumnType("datetime");
 
-                entity.HasOne(d => d.Usluga)
+                entity.HasOne(d => d.UslugaNavigation)
                     .WithMany(p => p.Posao)
                     .HasForeignKey(d => d.UslugaId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -553,8 +550,8 @@ namespace OzoMvc.Models
                 entity.ToTable("zaposlenik_posao");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                   
 
                 entity.Property(e => e.PosaoId).HasColumnName("posao_id");
 
@@ -568,7 +565,7 @@ namespace OzoMvc.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_zaposlenik_posao_posao");
 
-                entity.HasOne(d => d.Zaposlenik)
+                entity.HasOne(d => d.ZaposlenikNavigation)
                     .WithMany(p => p.ZaposlenikPosao)
                     .HasForeignKey(d => d.ZaposlenikId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
