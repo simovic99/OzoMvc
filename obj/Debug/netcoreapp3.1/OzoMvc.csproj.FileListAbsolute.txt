@@ -388,3 +388,4 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\De
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Edit.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Index.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Row.cshtml.g.cs

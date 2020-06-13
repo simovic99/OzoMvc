@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OzoMvc.Models;
+using OzoMvc.ViewModels;
 
 namespace OzoMvc.Controllers
 {
@@ -19,10 +20,52 @@ namespace OzoMvc.Controllers
         }
 
         // GET: ZaposlenikPosaos
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var pI05Context = _context.ZaposlenikPosao.Include(z => z.Posao).Include(z => z.ZaposlenikNavigation);
-            return View(await pI05Context.ToListAsync());
+
+            var po = _context.Posao.AsNoTracking();
+
+            var z = _context.ZaposlenikPosao.AsNoTracking().Where(x => x.Posao == po).ToList();
+            var o = _context.PosaoOprema.AsNoTracking().Where(y => y.Posao == po).ToList();
+            var zaposlenik = z.Select(x => new ZaposlenikPosao
+            {
+                ZaposlenikId=x.ZaposlenikId,
+                Posao=x.Posao,
+                PosaoId=x.PosaoId,
+                Satnica=x.Satnica,
+                ZaposlenikNavigation=x.ZaposlenikNavigation,
+
+                
+            })
+                        .ToList();
+            var oprema = o.Select(y => new PosaoOprema {
+            
+              Posao=y.Posao,
+              PosaoId=y.PosaoId,
+              Oprema=y.Oprema,
+              OpremaId=y.OpremaId,
+              Satnica=y.Satnica,
+
+            }).ToList();
+                 
+            var poslovi = po.Select(p => new PosaoViewModel
+            {
+                Id = p.Id,
+                Vrijeme = p.Vrijeme,    
+                UslugaNaziv = p.UslugaNavigation.Naziv,
+                MjestoNaziv = p.MjestoNavigation.Naziv,
+                Cijena = p.Cijena,
+                Troskovi = p.Troskovi,
+                ZaposlenikPosao=zaposlenik,
+                PosaoOprema=oprema,
+         
+
+            }).ToList();
+            var posao = new PosloviViewModel()
+            {
+                Poslovi = poslovi,
+            };
+            return View(posao);
         }
 
         // GET: ZaposlenikPosaos/Details/5
@@ -36,12 +79,12 @@ namespace OzoMvc.Controllers
             var zaposlenikPosao = await _context.ZaposlenikPosao
                 .Include(z => z.Posao)
                 .Include(z => z.ZaposlenikNavigation)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(z=> z.PosaoId==id).FirstOrDefaultAsync();
             if (zaposlenikPosao == null)
             {
                 return NotFound();
             }
-
+        
             return View(zaposlenikPosao);
         }
 
@@ -49,7 +92,7 @@ namespace OzoMvc.Controllers
         public IActionResult Create()
         {
             ViewData["PosaoId"] = new SelectList(_context.Posao, "Id", "Id");
-            ViewData["ZaposlenikId"] = new SelectList(_context.Zaposlenik, "Id", "Ime");
+            ViewData["ZaposlenikId"] = new MultiSelectList(_context.Zaposlenik, "Id", "Ime");
             return View();
         }
 

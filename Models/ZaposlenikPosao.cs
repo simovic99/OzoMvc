@@ -5,6 +5,10 @@ namespace OzoMvc.Models
 {
     public partial class ZaposlenikPosao
     {
+       
+
+      
+
         public int Id { get; set; }
         public int ZaposlenikId { get; set; }
         public int PosaoId { get; set; }

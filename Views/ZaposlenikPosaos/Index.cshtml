@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OzoMvc.Models.ZaposlenikPosao>
+﻿@model PosloviViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -10,39 +10,10 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Satnica)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Posao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ZaposlenikNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Satnica)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Posao.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZaposlenikNavigation.Ime)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+@foreach (var posao in Model.Poslovi)
+{
+    <partial name="Row" model="posao"  />
 }
-    </tbody>
-</table>
+
+

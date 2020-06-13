@@ -1,4 +1,4 @@
-﻿@model Posao
+﻿@model PosaoViewModel
 
 
 @{
@@ -38,22 +38,35 @@
         <input asp-for="Troskovi" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="PosaoOprema">Oprema</label>
-        <select class="form-control" asp-for="PosaoOprema" asp-items="ViewBag.Oprema">
+        <label asp-for="OpremaId">Oprema</label>
+        <select class="form-control" asp-for="OpremaId" asp-items="ViewBag.Oprema" multiple>
             <option disabled selected value="">Odaberite opremu</option>
         </select>
-    </div>
+       
+        
+            <label asp-for="SatnicaOpreme">Satnica zaposlenika</label>
+            <input type="time" class="form-control" asp-for="SatnicaOpreme" />
+        
+        </div>
     <div class="form-group">
-        <label asp-for="ZaposlenikPosao">Zaposlenici</label>
-        <select class="form-control" asp-for="ZaposlenikPosao" asp-items="ViewBag.Zaposlenici">
-            <option disabled selected value="">Odaberite opremu</option>
+        <label asp-for="ZaposlenikId">Zaposlenici</label>
+        <select class="form-control" asp-for="ZaposlenikId" asp-items="ViewBag.Zaposlenici" multiple>
+            <option disabled selected value="">Odaberite zaposlenike</option>
+
         </select>
+       
+        <label asp-for="SatnicaZaposlenika">Satnica zaposlenika</label>
+        
+        <input type="time" class="form-control" asp-for="SatnicaZaposlenika" />
+               
+
     </div>
-    <a href="../zaposlenikposaos/create">Unos zaposlenika</a>
-    <div class="text-center">
-        <button class="btn btn-primary" type="submit">Dodaj</button>
-        <a asp-action="Index" class="btn btn-secondary">Odustani</a>
-    </div>
+    
+         
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Dodaj</button>
+                <a asp-action="Index" class="btn btn-secondary">Odustani</a>
+            </div>
 
 
 

@@ -13,6 +13,10 @@ using OzoMvc.Extensions;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Lucene.Net.Support;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using PdfRpt.Core.Helper;
+using Microsoft.Crm.Sdk.Messages;
 
 
 
@@ -35,14 +39,7 @@ namespace OzoMvc.Controllers
             this.logger = logger;
         }
 
-        //public IActionResult Index()
-        //{
-        //  var drzave = ctx.Drzava
-        //                  .AsNoTracking()
-        //                  .OrderBy(d => d.NazDrzave)
-        //                  .ToList();
-        //  return View("IndexSimple", drzave);
-        //}
+  
 
 
         public IActionResult Index(string filter,int page = 1, int sort = 1, bool ascending = true)
@@ -53,11 +50,11 @@ namespace OzoMvc.Controllers
             PrepareDropDownLists();
             //var x = ctx.Posao.Include(p => p.ZaposlenikPosao).ThenInclude(z => z.Zaposlenik).AsNoTracking();
 
-            var query = ctx.Posao
+            var query = ctx.Posao.Include(z=>z.ZaposlenikPosao).ThenInclude(z=>z.ZaposlenikNavigation)
                         .AsNoTracking();
 
-            var x = ctx.ZaposlenikPosao.Include(z => z.ZaposlenikNavigation);
-
+            var x = ctx.ZaposlenikPosao.Where(z => z.Posao == query).AsNoTracking();
+           
             int count = query.Count();
             if (count == 0)
             {
@@ -116,6 +113,10 @@ namespace OzoMvc.Controllers
                        query.OrderBy(orderSelector) :
                        query.OrderByDescending(orderSelector);
             }
+
+
+
+
             var poslovi = query.Select(p => new PosaoViewModel
             {
                 Id = p.Id,
@@ -124,7 +125,9 @@ namespace OzoMvc.Controllers
                 MjestoNaziv = p.MjestoNavigation.Naziv,
                 Cijena = p.Cijena,
                 Troskovi = p.Troskovi,
-           
+
+
+
 
             })
                         .Skip((page - 1) * pagesize)
@@ -154,20 +157,21 @@ namespace OzoMvc.Controllers
         private void PrepareDropDownLists()
         {
             var usluge = ctx.Usluga.Select(d => new { d.Naziv, d.Id }).ToList();
-            var zaposlenici = ctx.Zaposlenik.Select(d => new { d.Ime, d.Id }).ToList();
+            var zaposlenici = ctx.Zaposlenik.Select(d => new { d.Ime, d.Id,d.Prezime}).ToList();
             var mjesta = ctx.Mjesto.Select(d => new { d.Naziv, d.Id }).ToList();
             var oprema= ctx.Oprema.Select(d => new { d.Naziv, d.InventarniBroj }).ToList();
             ViewBag.Mjesta = new SelectList(mjesta, nameof(Mjesto.Id), nameof(Mjesto.Naziv));
             ViewBag.Usluge = new SelectList(usluge, nameof(Usluga.Id), nameof(Usluga.Naziv));
-            ViewBag.Zaposlenici = new SelectList(zaposlenici, nameof(Zaposlenik.Id), nameof(Zaposlenik.Ime));
-            ViewBag.Oprema = new SelectList(oprema, nameof(Oprema.InventarniBroj), nameof(Oprema.Naziv));
+            ViewBag.Zaposlenici = new MultiSelectList(zaposlenici, nameof(Zaposlenik.Id), nameof(Zaposlenik.Ime),nameof(Zaposlenik.Prezime));
+            ViewBag.Oprema = new MultiSelectList(oprema, nameof(Oprema.InventarniBroj), nameof(Oprema.Naziv));
 
 
         }
+     
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Posao posao)
+        public IActionResult Create(PosaoViewModel posao)
 
         {
             PrepareDropDownLists();
@@ -176,18 +180,58 @@ namespace OzoMvc.Controllers
             {
                 try
                 {
+                    Posao p = new Posao()
+                    {
+                       
+                        UslugaId = posao.UslugaId,
+                        Vrijeme = posao.Vrijeme,
+                        Cijena = posao.Cijena,
+                        Troskovi = posao.Troskovi,
+                        MjestoId = posao.MjestoId,
+                       
+                       
+                    };
+                    ctx.Add(p);
 
-                                 
-                    ctx.Add(posao);
-                
+                    for (int i = 0; i < posao.ZaposlenikId.Length; i++)
+                    {
+                       
+                       ZaposlenikPosao zp= new ZaposlenikPosao()
+                        {
+                           Posao=p,
+                           ZaposlenikId = posao.ZaposlenikId[i],
+                          Satnica=posao.SatnicaZaposlenika,
+                          
+
+                        };
+                        ctx.Add(zp);
+                       
+                    }
+                    for (int i = 0; i < posao.OpremaId.Length; i++) {
+                        PosaoOprema op = new PosaoOprema()
+                        {
+                            Posao=p,
+                            OpremaId = posao.OpremaId[i],
+                           Satnica=posao.SatnicaOpreme,
+                           
+                           
+
+                        };
+                        ctx.Add(op);
+                        
+                    }
+               
+
                     ctx.SaveChanges();
 
-                    logger.LogInformation(new EventId(1000), $"Posao {posao.Id} dodan.");
+                    logger.LogInformation(new EventId(1000), $"Posao {p.Id} dodan.");
 
-                    TempData[Constants.Message] = $"Posao {posao.Id} dodan.";
+                    TempData[Constants.Message] = $"Posao {p.Id} dodan.";
                     TempData[Constants.ErrorOccurred] = false;
                     return RedirectToAction(nameof(Index));
+                
                 }
+        
                 catch (Exception exc)
                 {
                     logger.LogError("Pogreška prilikom dodavanja novog posla: {0}", exc.CompleteExceptionMessage());
@@ -241,7 +285,25 @@ namespace OzoMvc.Controllers
         public IActionResult Edit(int id, int page = 1, int sort = 1, bool ascending = true)
         {
             PrepareDropDownLists();
-            var posao = ctx.Posao.AsNoTracking().Where(d => d.Id == id).SingleOrDefault();
+            var p= ctx.Posao.AsNoTracking().Where(d => d.Id == id).SingleOrDefault();
+            var z = ctx.ZaposlenikPosao.AsNoTracking().Where(z => z.PosaoId == id).Select(z=>z.ZaposlenikId).ToArray();
+            var o = ctx.PosaoOprema.AsNoTracking().Where(z => z.PosaoId == id).Select(z=>z.OpremaId).ToArray();
+            var so = ctx.PosaoOprema.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.Satnica).FirstOrDefault();
+            var sz = ctx.ZaposlenikPosao.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.Satnica).FirstOrDefault();
+            PosaoViewModel posao = new PosaoViewModel()
+            {
+                Id = p.Id,
+                Vrijeme = p.Vrijeme,
+                MjestoId = p.MjestoId,
+                UslugaId = p.UslugaId,
+                Troskovi = p.Troskovi,
+                Cijena = p.Cijena,
+                ZaposlenikId = z,
+                OpremaId=o,
+                SatnicaZaposlenika = sz,
+                SatnicaOpreme = so,
+
+            };
             if (posao == null)
             {
                 logger.LogWarning("Ne postoji posao s oznakom: {0} ", id);
@@ -255,8 +317,11 @@ namespace OzoMvc.Controllers
                 return View(posao);
             }
         }
+       
         public IActionResult Row(int id)
         {
+            var z = ctx.ZaposlenikPosao.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.ZaposlenikId).ToArray();
+            var o = ctx.PosaoOprema.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.OpremaId).ToArray();
             var posao = ctx.Posao
                              .Where(p => p.Id == id)
                              .Select(p => new PosaoViewModel
@@ -266,7 +331,9 @@ namespace OzoMvc.Controllers
                                  UslugaNaziv = p.UslugaNavigation.Naziv,
                                  MjestoNaziv = p.MjestoNavigation.Naziv,
                                  Cijena = p.Cijena,
-                                 Troskovi = p.Troskovi
+                                 Troskovi = p.Troskovi,
+                                 OpremaId=o,
+                                 ZaposlenikId=z,
                              })
                              .SingleOrDefault();
             if (posao != null)
@@ -279,10 +346,43 @@ namespace OzoMvc.Controllers
                 return NoContent();
             }
         }
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var p = await ctx.ZaposlenikPosao
+                .Include(z => z.Posao)
+                .Include(z => z.ZaposlenikNavigation)
+                .Where(z => z.Posao.Id == id).FirstOrDefaultAsync();
+            var z = ctx.ZaposlenikPosao.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.ZaposlenikId).ToArray();
+            var o = ctx.PosaoOprema.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.OpremaId).ToArray();
+            var so = ctx.PosaoOprema.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.Satnica).FirstOrDefault();
+            var sz = ctx.ZaposlenikPosao.AsNoTracking().Where(z => z.PosaoId == id).Select(z => z.Satnica).FirstOrDefault();
+            var posao = new PosaoViewModel()
+            {
+                
+                Id = p.PosaoId,
+                Vrijeme = p.Posao.Vrijeme,
+                MjestoId=p.Posao.MjestoId,
+                UslugaId=p.Posao.UslugaId,
+                UslugaNaziv = p.Posao.UslugaNavigation.Naziv,
+                MjestoNaziv = p.Posao.MjestoNavigation.Naziv,
+                Cijena = p.Posao.Cijena,
+                Troskovi = p.Posao.Troskovi,
+                SatnicaZaposlenika=sz,
+                SatnicaOpreme=so,
+                OpremaId = o,
+                ZaposlenikId = z,
+            };
+
+            return View(posao);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Posao posao, int page = 1, int sort = 1, bool ascending = true)
+        public IActionResult Edit(PosaoViewModel posao, int page = 1, int sort = 1, bool ascending = true)
         {
             if (posao == null)
             {
@@ -299,7 +399,49 @@ namespace OzoMvc.Controllers
             {
                 try
                 {
-                    ctx.Update(posao);
+                    Posao po = new Posao()
+                    {
+                        Id=posao.Id,
+                        UslugaId = posao.UslugaId,
+                        Vrijeme = posao.Vrijeme,
+                        Cijena = posao.Cijena,
+                        Troskovi = posao.Troskovi,
+                        MjestoId = posao.MjestoId,
+           
+                    };
+                    ctx.Update(po);
+  
+                    for (int i = 0; i < posao.ZaposlenikId.Length; i++)
+                    {
+
+                        ZaposlenikPosao zp = new ZaposlenikPosao()
+                        {
+                            
+                            Posao = po,
+                            ZaposlenikId = posao.ZaposlenikId[i],
+                            Satnica = posao.SatnicaZaposlenika,
+
+
+                        };
+                        ctx.ZaposlenikPosao.Add(zp);
+
+                    }
+                    for (int i = 0; i < posao.OpremaId.Length; i++)
+                    {
+                        PosaoOprema op = new PosaoOprema()
+                        {
+                            Posao = po,
+                            OpremaId = posao.OpremaId[i],
+                            Satnica = posao.SatnicaOpreme,
+
+                        };
+                        ctx.Add(op);
+
+                    }
+
+
+
+
                     ctx.SaveChanges();
 
                     TempData[Constants.Message] = "Posao ažuriran.";
