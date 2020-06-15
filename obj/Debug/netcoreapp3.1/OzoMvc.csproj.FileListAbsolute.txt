@@ -377,15 +377,5 @@ C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnaly
 C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.csproj.CoreCompileInputs.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Create.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Delete.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Details.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Edit.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Index.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Create.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Delete.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Details.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Edit.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\PosaoOpremas\Index.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ZaposlenikPosaos\Row.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Details.cshtml.g.cs

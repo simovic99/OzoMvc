@@ -23,6 +23,8 @@ namespace OzoMvc.ViewModels
         public TimeSpan? SatnicaOpreme { get; set; }
         public virtual ICollection<ZaposlenikPosao> ZaposlenikPosao { get; set; }
         public virtual ICollection<PosaoOprema> PosaoOprema { get; set; }
+       public virtual ICollection<Zaposlenik> Zaposlenik { get; set; }
+       public virtual ICollection<Oprema> Oprema { get; set; }
         public virtual Usluga UslugaNavigation { get; set; }
         public virtual Mjesto MjestoNavigation { get; set; }
 

@@ -7,6 +7,7 @@ namespace OzoMvc.Models
     {
         public int Id { get; set; }
         public int MjestoId { get; set; }
+        public string Naziv { get; set; }
 
         public virtual Mjesto Mjesto { get; set; }
 

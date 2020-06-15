@@ -130,3 +130,159 @@ Cannot insert explicit value for identity column in table 'posao' when IDENTITY_
 2020-06-13 14:01:02.0656|0|OzoMvc.Controllers.PosaoController|ERROR|Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
  
 2020-06-13 14:01:12.9883|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 55 dodan. 
+2020-06-13 14:05:58.2616|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 14:05:58.6144|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 14:05:58.6174|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 14:05:58.6174|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 14:06:25.0305|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 56 dodan. 
+2020-06-13 14:06:54.4070|0|OzoMvc.Controllers.PosaoController|ERROR|Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
+ 
+2020-06-13 14:07:01.1130|0|OzoMvc.Controllers.PosaoController|ERROR|Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
+ 
+2020-06-13 14:07:06.1048|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 57 dodan. 
+2020-06-13 14:57:01.4496|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 14:57:01.9257|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 14:57:01.9297|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 14:57:01.9297|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 14:57:12.6438|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[OzoMvc.Models.ZaposlenikPosao]', but this ViewDataDictionary instance requires a model item of type 'OzoMvc.Models.ZaposlenikPosao'.
+2020-06-13 14:59:28.7302|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 14:59:29.1896|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 14:59:29.1896|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 14:59:29.2013|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:00:41.2033|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:00:41.6337|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:00:41.6337|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:00:41.6337|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:06:21.5444|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:06:22.3871|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:06:22.3871|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:06:22.4109|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:06:30.3807|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2020-06-13 15:10:55.4209|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:10:55.8667|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:10:55.8667|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:10:55.8836|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:14:09.9316|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:14:10.5728|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:14:10.5728|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:14:10.5952|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:19:45.5845|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:19:46.0156|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:19:46.0156|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:19:46.0267|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:21:58.6421|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:21:59.1238|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:21:59.1238|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:21:59.1455|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:22:56.1147|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:22:56.5422|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:22:56.5422|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:22:56.5422|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:45:19.8381|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:45:20.2798|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:45:20.2798|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:45:20.2906|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:45:29.8788|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:46:21.2613|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:46:21.6923|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:46:21.6967|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:46:21.6967|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:46:21.7823|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:46:21.7823|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:46:48.2730|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:46:49.1104|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:46:49.1207|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:46:49.1334|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:46:49.2118|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:46:58.4961|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:49:01.2308|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:49:02.0810|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:49:02.0854|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:49:02.0854|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:49:02.1881|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:49:06.3112|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+OzoMvc.Controllers.PosaoController.Details (OzoMvc)
+2020-06-13 15:49:50.0274|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:49:50.8503|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:49:50.8503|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:49:50.8705|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:49:53.7538|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:49:57.3141|0|OzoMvc.Controllers.PosaoController|WARN|Ne postoji posao s oznakom: 12  
+2020-06-13 15:50:01.6123|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:51:20.3668|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:51:21.1576|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:51:21.1648|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:51:21.1786|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:51:27.1503|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:51:56.2021|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:51:57.0234|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:51:57.0234|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:51:57.0458|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:51:59.8483|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:52:36.8639|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:52:37.7928|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:52:37.7928|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:52:37.8096|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:52:40.5919|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:53:39.7524|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:53:40.5381|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:53:40.5381|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:53:40.5381|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:53:43.2164|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 15:55:19.2442|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:55:19.8639|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:55:19.8687|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:55:19.8687|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:55:41.3527|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:55:42.1969|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:55:42.1969|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:55:42.2150|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:58:15.5808|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:58:15.9157|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:58:15.9157|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:58:15.9157|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 15:59:30.2831|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 15:59:30.6262|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 15:59:30.6262|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 15:59:30.6352|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 16:00:43.7988|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 16:00:44.1316|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 16:00:44.1316|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 16:00:44.1316|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 16:03:14.8965|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 16:03:15.2274|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 16:03:15.2274|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 16:03:15.2274|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 16:04:45.4548|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 16:04:45.7884|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 16:04:45.7884|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 16:04:45.7884|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 16:05:11.8134|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 16:05:12.1568|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 16:05:12.1568|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 16:05:12.1659|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-13 16:05:13.4093|1|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2020-06-13 16:05:30.4790|0|OzoMvc.Program|DEBUG|init main 
+2020-06-13 16:05:30.8120|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-13 16:05:30.8120|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-13 16:05:30.8208|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 

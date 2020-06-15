@@ -376,6 +376,7 @@ namespace OzoMvc.Models
                     .ValueGeneratedNever();
 
                 entity.Property(e => e.MjestoId).HasColumnName("mjesto_id");
+                entity.Property(e => e.Naziv).HasColumnName("naziv");
 
                 entity.HasOne(d => d.Mjesto)
                     .WithMany(p => p.Skladište)

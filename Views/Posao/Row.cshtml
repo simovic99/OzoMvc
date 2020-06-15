@@ -7,18 +7,46 @@
         <td class="text-left">@Model.Cijena</td>
         <td class="text-left">@Model.Troskovi</td>
         <td class="text-left">@Model.Vrijeme</td>
-        <td class="text-left">
-            <a asp-action="Details"
-               asp-route-page="@ViewBag.PagingInfo.CurrentPage"
-               asp-route-sort="@(((PagingInfo)ViewData["PagingInfo"]).Sort)"
-               asp-route-ascending="@ViewBag.PagingInfo.Ascending"
-               asp-route-id="@Model.Id" >
-               Detalji</a>
+       
+          <td class="text-left" 
+              
+                  @foreach (var x in Model.ZaposlenikPosao)
+                  {
+                      foreach (var y in Model.Zaposlenik)
+                      {
+                          if (x.ZaposlenikId == y.Id)
+                          {
+                             <p> @y.Prezime @y.Ime </p>
+                          }
 
 
 
-        </td>
-        <td class="text-left">@Html.DisplayFor(model => model.OpremaId) </td>
+                      }
+
+
+                  }
+              
+
+          </td>
+          <td class="text-left">
+              @foreach (var x in Model.PosaoOprema)
+              {
+                  foreach (var y in Model.Oprema)
+                  {
+                      if (x.OpremaId == y.InventarniBroj)
+                      {
+                          <p> @y.Naziv</p>
+                      }
+
+
+
+                  }
+
+
+              }
+
+
+          </td>
        
        
        

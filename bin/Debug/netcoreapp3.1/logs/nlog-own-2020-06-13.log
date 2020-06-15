@@ -43,3 +43,38 @@ Cannot insert explicit value for identity column in table 'posao' when IDENTITY_
 2020-06-13 14:01:02.0656|0|OzoMvc.Controllers.PosaoController|ERROR|  Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
  |url: https://localhost/Posao/Create?|action: Create
 2020-06-13 14:01:12.9883|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 55 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-13 14:05:58.2616|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 14:06:25.0305|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 56 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-13 14:06:54.4070|0|OzoMvc.Controllers.PosaoController|ERROR|  Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
+ |url: https://localhost/Posao/Create?|action: Create
+2020-06-13 14:07:01.1130|0|OzoMvc.Controllers.PosaoController|ERROR|  Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
+ |url: https://localhost/Posao/Create?|action: Create
+2020-06-13 14:07:06.1048|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 57 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-13 14:57:01.4496|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 14:59:28.7302|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:00:41.2033|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:06:21.5444|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:10:55.4209|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:14:09.9316|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:19:45.5845|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:21:58.6421|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:22:56.1147|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:45:19.8381|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:46:21.2613|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:46:48.2730|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:49:01.2308|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:49:50.0274|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:49:57.3141|0|OzoMvc.Controllers.PosaoController|WARN|  Ne postoji posao s oznakom: 12  |url: https://localhost/Posao/Details/12?page=1,sort=1,ascending=True|action: Details
+2020-06-13 15:51:20.3668|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:51:56.2021|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:52:36.8639|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:53:39.7524|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:55:19.2442|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:55:41.3527|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:58:15.5808|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 15:59:30.2831|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 16:00:43.7988|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 16:03:14.8965|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 16:04:45.4548|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 16:05:11.8134|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-13 16:05:30.4790|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 

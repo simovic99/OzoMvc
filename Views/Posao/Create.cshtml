@@ -40,34 +40,36 @@
     <div class="form-group">
         <label asp-for="OpremaId">Oprema</label>
         <select class="form-control" asp-for="OpremaId" asp-items="ViewBag.Oprema" multiple>
-            <option disabled selected value="">Odaberite opremu</option>
         </select>
-       
+      
         
-            <label asp-for="SatnicaOpreme">Satnica zaposlenika</label>
+            <label asp-for="SatnicaOpreme">Satnica opreme</label>
             <input type="time" class="form-control" asp-for="SatnicaOpreme" />
+
         
+
+
         </div>
-    <div class="form-group">
-        <label asp-for="ZaposlenikId">Zaposlenici</label>
-        <select class="form-control" asp-for="ZaposlenikId" asp-items="ViewBag.Zaposlenici" multiple>
-            <option disabled selected value="">Odaberite zaposlenike</option>
+        <div class="form-group">
+            <label asp-for="ZaposlenikId">Zaposlenici</label>
+            <select class="form-control" asp-for="ZaposlenikId" asp-items="ViewBag.Zaposlenici" multiple>
+                
 
-        </select>
-       
-        <label asp-for="SatnicaZaposlenika">Satnica zaposlenika</label>
-        
-        <input type="time" class="form-control" asp-for="SatnicaZaposlenika" />
-               
+            </select>
 
-    </div>
-    
-         
-            <div class="text-center">
-                <button class="btn btn-primary" type="submit">Dodaj</button>
-                <a asp-action="Index" class="btn btn-secondary">Odustani</a>
-            </div>
+            <label asp-for="SatnicaZaposlenika">Satnica zaposlenika</label>
+
+            <input type="time" class="form-control" asp-for="SatnicaZaposlenika" />
 
 
+        </div>
 
-</form>
+
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Dodaj</button>
+            <a asp-action="Index" class="btn btn-secondary">Odustani</a>
+        </div>
+
+
+
+    </form>
