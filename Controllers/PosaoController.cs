@@ -157,6 +157,7 @@ namespace OzoMvc.Controllers
         {
             PrepareDropDownLists();
 
+
             return View();
         }
         private void PrepareDropDownLists()
@@ -202,38 +203,48 @@ namespace OzoMvc.Controllers
                     };
                     ctx.Add(p);
 
-                   
+                   if(posao.ZaposlenikId != null) {
 
-                 foreach(int x in posao.ZaposlenikId)
-                    {
-
-                        ZaposlenikPosao zp = new ZaposlenikPosao()
+                        foreach (int x in posao.ZaposlenikId)
                         {
-                            Posao = p,
-                            ZaposlenikId =x,
-                            Satnica = posao.SatnicaZaposlenika,
-                            
 
-                        };
-                        ctx.Add(zp);
+                            ZaposlenikPosao zp = new ZaposlenikPosao()
+                            {
+                                Posao = p,
+                                ZaposlenikId = x,
+
+
+
+                            };
+                            if (posao.SatnicaZaposlenika != null)
+                                zp.Satnica = posao.SatnicaZaposlenika;
+                            ctx.Add(zp);
+                        
+                     
+                        }
+
 
                     }
-                    foreach(int x in posao.OpremaId)
+                    if (posao.OpremaId != null)
                     {
-                        PosaoOprema op = new PosaoOprema()
+                        foreach (int x in posao.OpremaId)
                         {
-                            Posao = p,
-                            OpremaId = x,
-                            Satnica = posao.SatnicaOpreme,
+                            PosaoOprema op = new PosaoOprema()
+                            {
+                                Posao = p,
+                                OpremaId = x,
+                               
 
 
 
-                        };
-                        ctx.Add(op);
+                            };
+                            if (posao.SatnicaZaposlenika != null)
+                                op.Satnica = posao.SatnicaOpreme;
+                            ctx.Add(op);
+
+                        }
 
                     }
-                    
-                 
 
                     ctx.SaveChanges();
 
@@ -270,6 +281,18 @@ namespace OzoMvc.Controllers
             {
                 try
                 {
+                    var z = ctx.ZaposlenikPosao.Where(z => z.PosaoId == posao.Id).ToList();
+                    var o = ctx.PosaoOprema.Where(x => x.PosaoId == posao.Id).ToList();
+                    foreach (var x in z)
+                    {
+                        ctx.Remove(x);
+                    }
+                    foreach (var x in o)
+                    {
+                        ctx.Remove(x);
+                    }
+                    ctx.SaveChanges();
+
                     int id = posao.Id;
                     ctx.Remove(posao);
                     ctx.SaveChanges();
@@ -418,19 +441,22 @@ namespace OzoMvc.Controllers
                     };
                    
                     ctx.Update(p);
-                    foreach (int x in posao.ZaposlenikId)
-                    {
-
-                        ZaposlenikPosao zp = new ZaposlenikPosao()
+                    if(posao.ZaposlenikId != null) {
+                        foreach (int x in posao.ZaposlenikId)
                         {
-                            Posao = p,
-                            ZaposlenikId = x,
-                            Satnica = posao.SatnicaZaposlenika,
+
+                            ZaposlenikPosao zp = new ZaposlenikPosao()
+                            {
+                                Posao = p,
+                                ZaposlenikId = x,
 
 
-                        };
-                        ctx.Add(zp);
 
+                            };
+                            if (posao.SatnicaZaposlenika != null)
+                                zp.Satnica = posao.SatnicaZaposlenika;
+                            ctx.Add(zp);
+                        }
                     }
                     foreach (int x in posao.OpremaId)
                     {
@@ -438,21 +464,22 @@ namespace OzoMvc.Controllers
                         {
                             Posao = p,
                             OpremaId = x,
-                            Satnica = posao.SatnicaOpreme,
+
 
 
 
                         };
-                        ctx.Add(op);
+                        if (posao.SatnicaZaposlenika != null)
+                            op.Satnica = posao.SatnicaOpreme;
+                            ctx.Add(op);
 
                     }
 
 
 
-
                     ctx.SaveChanges();
 
-                    TempData[Constants.Message] = "Posao ažuriran.";
+                    TempData[Constants.Message] = $"Posao {p.Id} ažuriran.";
                     TempData[Constants.ErrorOccurred] = false;
                     return RedirectToAction(nameof(Index), new { page, sort, ascending });
                 }

@@ -467,3 +467,21 @@ The statement has been terminated.
 2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
 2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
 2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:28:25.0109|0|OzoMvc.Controllers.PosaoController|ERROR|Pogreška prilikom dodavanja novog posla: Object reference not set to an instance of an object.
+ 
+2020-06-15 23:30:23.3611|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:30:23.6918|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:30:23.6949|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:30:23.6949|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:30:25.1222|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 66 dodan. 
+2020-06-15 23:38:33.8729|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:38:34.4145|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:38:34.4145|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:38:34.4288|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:38:58.7948|1000|OzoMvc.Controllers.PosaoController|INFO|Posao 67 dodan. 
+2020-06-15 23:40:29.6021|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:40:30.1402|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:40:30.1402|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:40:30.1555|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:40:36.8712|0|OzoMvc.Controllers.PosaoController|INFO|Posao 61 uspješno obrisan 
+2020-06-15 23:40:43.8666|0|OzoMvc.Controllers.PosaoController|INFO|Posao 11 uspješno obrisan 
