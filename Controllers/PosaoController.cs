@@ -390,43 +390,60 @@ namespace OzoMvc.Controllers
             {
                 try
                 {
-                    Posao po = new Posao()
+                    var z = ctx.ZaposlenikPosao.Where(z => z.PosaoId == posao.Id).ToList();
+                    var o = ctx.PosaoOprema.Where(x => x.PosaoId == posao.Id).ToList();
+                    foreach(var x in z) {
+                        ctx.Remove(x);
+                    }
+                    foreach (var x in o)
+                    {
+                        ctx.Remove(x);
+                    }
+                    ctx.SaveChanges();
+
+
+                    var p = new Posao()
                     {
                         Id = posao.Id,
-                        UslugaId = posao.UslugaId,
                         Vrijeme = posao.Vrijeme,
-                        Cijena = posao.Cijena,
-                        Troskovi = posao.Troskovi,
                         MjestoId = posao.MjestoId,
+                        UslugaId = posao.UslugaId,
+                        Troskovi = posao.Troskovi,
+                        Cijena = posao.Cijena,
+                        ZaposlenikPosao = posao.ZaposlenikPosao,
+
+
+
 
                     };
-                    ctx.Update(po);
-
-                    foreach(var i in posao.ZaposlenikId)
+                   
+                    ctx.Update(p);
+                    foreach (int x in posao.ZaposlenikId)
                     {
 
                         ZaposlenikPosao zp = new ZaposlenikPosao()
                         {
-
-                            Posao = po,
-                            ZaposlenikId = i,
+                            Posao = p,
+                            ZaposlenikId = x,
                             Satnica = posao.SatnicaZaposlenika,
 
 
                         };
-                        ctx.ZaposlenikPosao.Add(zp);
+                        ctx.Add(zp);
 
                     }
-                    foreach(var i in posao.OpremaId)
+                    foreach (int x in posao.OpremaId)
                     {
                         PosaoOprema op = new PosaoOprema()
                         {
-                            Posao = po,
-                            OpremaId = i,
+                            Posao = p,
+                            OpremaId = x,
                             Satnica = posao.SatnicaOpreme,
 
+
+
                         };
-                        ctx.Update(op);
+                        ctx.Add(op);
 
                     }
 

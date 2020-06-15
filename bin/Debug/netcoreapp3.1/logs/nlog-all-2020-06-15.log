@@ -435,3 +435,35 @@ The statement has been terminated.
  
 2020-06-15 22:50:45.8293|0|OzoMvc.Controllers.PosaoController|INFO|Posao 36 uspješno obrisan 
 2020-06-15 22:50:55.6385|0|OzoMvc.Controllers.PosaoController|INFO|Posao 64 uspješno obrisan 
+2020-06-15 22:53:26.9591|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 22:53:27.5047|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 22:53:27.5098|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 22:53:27.5098|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:11:14.8852|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:11:15.2107|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:11:15.2107|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:11:15.2107|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:12:45.2954|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:12:45.6374|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:12:45.6374|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:12:45.6374|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:16:48.4615|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:16:48.8002|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:16:48.8032|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:16:48.8032|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:20:24.0630|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:20:24.3932|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:20:24.3932|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:20:24.4018|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:21:19.1468|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:21:19.4771|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:21:19.4771|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:21:19.4771|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:21:53.4366|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:21:53.7645|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:21:53.7645|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:21:53.7739|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 
+2020-06-15 23:25:38.7670|0|OzoMvc.Program|DEBUG|init main 
+2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2020-06-15 23:25:39.3189|0|Microsoft.Hosting.Lifetime|INFO|Content root path: C:\Users\Pero\Desktop\OzoMvc 

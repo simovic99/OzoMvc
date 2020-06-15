@@ -35,15 +35,14 @@ namespace OzoMvc.Models
         public virtual DbSet<VrstaOpreme> VrstaOpreme { get; set; }
         public virtual DbSet<Zaposlenik> Zaposlenik { get; set; }
         public virtual DbSet<ZaposlenikPosao> ZaposlenikPosao { get; set; }
-        public virtual DbSet<PView> PView { get; set; }
-
+       
 
 
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PView>(e => { e.ToView("PView").HasKey(e=>e.Id).HasName("id"); });
+           
            modelBuilder.Entity<CertifikatZaposlenik>(entity =>
             {
                 entity.ToTable("certifikat_zaposlenik");
@@ -506,8 +505,8 @@ namespace OzoMvc.Models
                 entity.ToTable("vrsta_opreme");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                    
 
                 entity.Property(e => e.Naziv)
                     .HasColumnName("naziv")
@@ -520,8 +519,7 @@ namespace OzoMvc.Models
                 entity.ToTable("zaposlenik");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
 
                 entity.Property(e => e.DatumRodjenja)
                     .HasColumnName("datum_rodjenja")

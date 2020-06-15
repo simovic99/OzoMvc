@@ -146,3 +146,11 @@ The statement has been terminated.
  |url: https://localhost/Posao/Delete?|action: Delete
 2020-06-15 22:50:45.8293|0|OzoMvc.Controllers.PosaoController|INFO|  Posao 36 uspješno obrisan |url: https://localhost/Posao/Delete?|action: Delete
 2020-06-15 22:50:55.6385|0|OzoMvc.Controllers.PosaoController|INFO|  Posao 64 uspješno obrisan |url: https://localhost/Posao/Delete?|action: Delete
+2020-06-15 22:53:26.9591|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:11:14.8852|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:12:45.2954|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:16:48.4615|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:20:24.0630|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:21:19.1468|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:21:53.4366|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-15 23:25:38.7670|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 

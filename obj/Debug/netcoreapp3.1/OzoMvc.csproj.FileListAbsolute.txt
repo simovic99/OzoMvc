@@ -151,7 +151,6 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.TagHelpers.output.ca
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.RazorCoreGenerate.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Home\index.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Index.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\indexsimple.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Navigation\Default.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -378,4 +377,3 @@ C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnaly
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.csproj.CoreCompileInputs.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Details.cshtml.g.cs
