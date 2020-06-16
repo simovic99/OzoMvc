@@ -11,18 +11,21 @@
     <div asp-validation-summary="All"></div>
 
     <div class="form-group">
-        <label asp-for="UslugaId"></label>
+        <div><span asp-validation-for="UslugaId" class="text-danger" /></div>
+        <label asp-for="UslugaId">Usluga</label>
         <select class="form-control" asp-for="UslugaId" asp-items="ViewBag.Usluge">
             <option disabled selected value="">Odaberite uslugu</option>
         </select>
     </div>
     <div class="form-group">
+        <div><span asp-validation-for="MjestoId" class="text-danger" /></div>
         <label asp-for="MjestoId">Mjesto</label>
         <select class="form-control" asp-for="MjestoId" asp-items="ViewBag.Mjesta">
             <option disabled selected value="">Odaberite mjesto</option>
         </select>
     </div>
     <div class="form-group">
+        <div><span asp-validation-for="Cijena" class="text-danger" /></div>
         <label asp-for="Cijena"></label>
         <div><span asp-validation-for="Cijena" class="text-danger" /></div>
         <input maxlength="5" asp-for="Cijena" class="form-control" />

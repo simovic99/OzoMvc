@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using OzoMvc.Models;
 
 namespace OzoMvc.ViewModels
@@ -13,12 +14,27 @@ namespace OzoMvc.ViewModels
         public DateTime? Vrijeme { get; set; }
         public string UslugaNaziv { get; set; }
         public string MjestoNaziv { get; set; }
+
+        [Display(Name = "Cijena")]
+        [Required(ErrorMessage = "Cijena je obvezno polje")]
         public double Cijena { get; set; }
+
+
+        [Display(Name = "Troskovi")]
+        [Required(ErrorMessage = "Troskovi su obvezno polje")]
         public double Troskovi { get; set; }
+
+
+        [Display(Name = "Usluga")]
+        [Required(ErrorMessage = "Usluga je obvezno polje")]
         public int UslugaId { get; set; }
         public int[] ZaposlenikId { get; set; }
         public int[] OpremaId { get; set; }
+
+        [Display(Name = "Mjesto")]
+        [Required(ErrorMessage = "Mjesto je obvezno polje")]
         public int MjestoId { get; set; }
+
         public TimeSpan? SatnicaZaposlenika { get; set; }
         public TimeSpan? SatnicaOpreme { get; set; }
         public virtual ICollection<ZaposlenikPosao> ZaposlenikPosao { get; set; }

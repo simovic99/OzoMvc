@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace OzoMvc.Models
 {
@@ -11,10 +12,19 @@ namespace OzoMvc.Models
             ZaposlenikPosao = new HashSet<ZaposlenikPosao>();
         }
 
+  
         public int Id { get; set; }
+      
         public DateTime? Vrijeme { get; set; }
+        
+      
         public int UslugaId { get; set; }
+
+
         public int MjestoId { get; set; }
+
+
+    
         public double Cijena { get; set; }
        
         public double Troskovi { get; set; }
