@@ -18,13 +18,14 @@ namespace OzoMvc.ViewModels
         public DateTime? TrajanjeDo { get; set; }
         public double? IznosOd { get; set; }
         public double? IznosDo { get; set; }
-
+       
         public bool IsEmpty()
         {
             bool active = TrajanjeOd.HasValue
                           || TrajanjeDo.HasValue
                           || IznosOd.HasValue
                           || IznosDo.HasValue;
+                          
             return !active;
         }
         public override string ToString()
@@ -34,7 +35,8 @@ namespace OzoMvc.ViewModels
                 TrajanjeOd?.ToString("dd.MM.yyyy"),
                 TrajanjeDo?.ToString("dd.MM.yyyy"),
                 IznosOd,
-                IznosDo);
+                IznosDo
+                );
         }
         public static PosaoFilter FromString(string s)
         {
@@ -47,6 +49,8 @@ namespace OzoMvc.ViewModels
                 filter.TrajanjeDo = string.IsNullOrWhiteSpace(arr[1]) ? new DateTime?() : DateTime.ParseExact(arr[1], "dd.MM.yyyy", CultureInfo.InvariantCulture);
                 filter.IznosOd = string.IsNullOrWhiteSpace(arr[2]) ? new double?() : double.Parse(arr[2]);
                 filter.IznosDo = string.IsNullOrWhiteSpace(arr[3]) ? new double?() : double.Parse(arr[3]);
+            
+
             }
             catch { }
             return filter;

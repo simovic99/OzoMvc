@@ -20,15 +20,24 @@
          @(ViewBag.Controller == "Usluga" ? "active": "")"
            asp-action="Index" asp-controller="Usluga">Usluge</a>
     </li>
-    <div class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle @(ViewBag.Controller == "Natjecaj" ? "active": "")"
-           asp-action="Index" asp-controller="Natjecaj" data-toggle="dropdown">Natječaji</a>
-        <div class="dropdown-menu ">
-            <a class="dropdown-item  @(ViewBag.Controller == "Natjecaj" ? "active": "")"
-               asp-action="Index" asp-controller="Natjecaj">Popis natječaja</a>
-            <a class="dropdown-item  @(ViewBag.Controller == "Ponudjivaci" ? "active": "")"
-               asp-action="Index" asp-controller="Ponudjivaci">Popis ponuđivača</a>
+    <li>
+        <div class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle @(ViewBag.Controller == "Natjecaj" ? "active": "")"
+               asp-action="Index" asp-controller="Natjecaj" data-toggle="dropdown">Natječaji</a>
+            <div class="dropdown-menu ">
+                <a class="dropdown-item  @(ViewBag.Controller == "Natjecaj" ? "active": "")"
+                   asp-action="Index" asp-controller="Natjecaj">Popis natječaja</a>
+                <a class="dropdown-item  @(ViewBag.Controller == "Ponudjivaci" ? "active": "")"
+                   asp-action="Index" asp-controller="Ponudjivaci">Popis ponuđivača</a>
 
+            </div>
         </div>
-    </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link
+  @(ViewBag.Controller == "ViewLog" ? "active": "")"
+           asp-action="Index" asp-controller="ViewLog">
+            Pregled log datoteka
+        </a>
+    </li>
 </ul>

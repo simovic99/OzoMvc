@@ -9,23 +9,24 @@
         <td class="text-left">@Model.Vrijeme</td>
        
           <td class="text-left" >
-              
+            
+
                   @foreach (var x in Model.ZaposlenikPosao)
                   {
                       foreach (var y in Model.Zaposlenik)
                       {
                           if (x.ZaposlenikId == y.Id)
                           {
-                             <p> @y.Prezime @y.Ime </p>
+                
+              <p>  @y.Prezime  @y.Ime  </p>
+
                           }
-
-
 
                       }
 
-
+                      
                   }
-              
+                      
 
           </td>
           <td class="text-left">

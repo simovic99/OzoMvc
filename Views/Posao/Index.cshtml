@@ -9,9 +9,16 @@
 
 <h2>Popis poslova</h2>
 
-<a asp-action="Create">Unos novog posla</a>
-<div class="col-sm-7">
-    <partial name="KriterijPretrage" model="Model.Filter" />
+<div class="container">
+    <div class="form-group row">
+        <div class="col-sm-3">
+            <a asp-action="Create" class="btn btn-secondary" style="margin-bottom:20px;">Dodaj novi posao </a>
+        </div>
+        <div class="col-sm-7">
+            <partial name="KriterijPretrage" model="Model.Filter" />
+        </div>
+    </div>
+    
 </div>
 
 <pager page-info="@Model.PagingInfo" page-action="Index" page-title="Unesite željenu stranicu"
@@ -22,7 +29,7 @@
     <thead>
         <tr>
             @{
-                string[] nazivi = { "Id", "Usluga", "Mjesto", "Cijena", "Troskovi", "Datum", "Angažirani zaposlenici","Korištena oprema" };
+                string[] nazivi = { "Id", "Usluga", "Mjesto", "Cijena", "Troskovi", "Datum", "Angažirani zaposlenici", "Korištena oprema" };
                 for (int i = 1; i <= nazivi.Length; i++)
                 {
                     <th>

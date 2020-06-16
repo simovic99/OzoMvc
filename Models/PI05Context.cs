@@ -150,8 +150,8 @@ namespace OzoMvc.Models
                 entity.ToTable("mjesto");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                    
 
                 entity.Property(e => e.GradId).HasColumnName("grad_id");
 
@@ -425,8 +425,8 @@ namespace OzoMvc.Models
                 entity.ToTable("usluga");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                    
 
                 entity.Property(e => e.Cijena).HasColumnName("cijena");
 
@@ -455,14 +455,14 @@ namespace OzoMvc.Models
                 entity.ToTable("usluga_kategorija");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                    
 
                 entity.Property(e => e.Kategorija).HasColumnName("kategorija");
 
                 entity.Property(e => e.UslugaId)
-                    .HasColumnName("usluga_id")
-                    .ValueGeneratedOnAdd();
+                    .HasColumnName("usluga_id");
+                    
 
                 entity.HasOne(d => d.KategorijaNavigation)
                     .WithMany(p => p.UslugaKategorija)

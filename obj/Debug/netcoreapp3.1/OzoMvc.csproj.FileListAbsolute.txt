@@ -377,3 +377,5 @@ C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnaly
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.csproj.CoreCompileInputs.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ViewLog\Index.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ViewLog\Show.cshtml.g.cs

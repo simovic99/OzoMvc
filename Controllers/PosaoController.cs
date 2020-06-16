@@ -69,10 +69,10 @@ namespace OzoMvc.Controllers
                 nf = PosaoFilter.FromString(filter);
                 if (!nf.IsEmpty())
                 {
-
+                 
                     query = nf.Apply(query);
                 }
-            }
+                }
 
             var pagingInfo = new ViewModels.PagingInfo
             {
