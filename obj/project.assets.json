@@ -45,18 +45,6 @@
           "lib/netstandard2.0/iTextSharp.LGPLv2.Core.dll": {}
         }
       },
-      "Lucene.Net/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "SharpZipLib": "0.86.0"
-        },
-        "compile": {
-          "lib/NET40/Lucene.Net.dll": {}
-        },
-        "runtime": {
-          "lib/NET40/Lucene.Net.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1285,15 +1273,6 @@
             "assetType": "native",
             "rid": "win-x86"
           }
-        }
-      },
-      "SharpZipLib/0.86.0": {
-        "type": "package",
-        "compile": {
-          "lib/20/ICSharpCode.SharpZipLib.dll": {}
-        },
-        "runtime": {
-          "lib/20/ICSharpCode.SharpZipLib.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
@@ -3147,23 +3126,6 @@
         "lib/netstandard1.3/iTextSharp.LGPLv2.Core.xml",
         "lib/netstandard2.0/iTextSharp.LGPLv2.Core.dll",
         "lib/netstandard2.0/iTextSharp.LGPLv2.Core.xml"
-      ]
-    },
-    "Lucene.Net/3.0.3": {
-      "sha512": "A/70q4eDcuuafQeDB9eaiDP9FQG7X29T4VIYRphS7Wk8kAM9gNcfVqYyd0H8BJ1BTpA5C1ORm9RzFn4BiNavrw==",
-      "type": "package",
-      "path": "lucene.net/3.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/NET35/Lucene.Net.XML",
-        "lib/NET35/Lucene.Net.dll",
-        "lib/NET35/Lucene.Net.pdb",
-        "lib/NET40/Lucene.Net.XML",
-        "lib/NET40/Lucene.Net.dll",
-        "lib/NET40/Lucene.Net.pdb",
-        "lucene.net.3.0.3.nupkg.sha512",
-        "lucene.net.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -5096,21 +5058,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "SharpZipLib/0.86.0": {
-      "sha512": "5DbS1SlKLMi+WG00Cm0ueYf2oyXJrowETQk8nx96rmdjTuHsA3laPykGV7Sxi0R5Xxfx0Kh/EfacAZ1f6M7y/g==",
-      "type": "package",
-      "path": "sharpziplib/0.86.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/11/ICSharpCode.SharpZipLib.dll",
-        "lib/20/ICSharpCode.SharpZipLib.dll",
-        "lib/SL3/SharpZipLib.Silverlight3.dll",
-        "lib/SL4/SharpZipLib.Silverlight4.dll",
-        "sharpziplib.0.86.0.nupkg.sha512",
-        "sharpziplib.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
@@ -9985,7 +9932,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Lucene.Net >= 3.0.3",
       "Microsoft.CrmSdk.CoreAssemblies >= 9.0.2.24",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
@@ -10033,10 +9979,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Lucene.Net": {
-            "target": "Package",
-            "version": "[3.0.3, )"
-          },
           "Microsoft.CrmSdk.CoreAssemblies": {
             "target": "Package",
             "version": "[9.0.2.24, )"
@@ -10101,28 +10043,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Lucene.Net 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Lucene.Net",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.CrmSdk.CoreAssemblies 9.0.2.24' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.CrmSdk.CoreAssemblies",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "SharpZipLib",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

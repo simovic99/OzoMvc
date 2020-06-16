@@ -38,10 +38,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Lucene.Net": {
-              "target": "Package",
-              "version": "[3.0.3, )"
-            },
             "Microsoft.CrmSdk.CoreAssemblies": {
               "target": "Package",
               "version": "[9.0.2.24, )"

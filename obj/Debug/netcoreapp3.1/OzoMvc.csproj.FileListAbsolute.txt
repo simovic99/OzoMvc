@@ -164,8 +164,6 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\staticwebassets\OzoMvc.Stat
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.genruntimeconfig.cache
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Create.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Edit.cshtml.g.cs
-C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\Lucene.Net.dll
-C:\Users\Pero\Desktop\OzoMvc\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\Row.cshtml.g.cs
 C:\Users\Pero\Desktop\git\OzoMvc\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Pero\Desktop\git\OzoMvc\bin\Debug\netcoreapp3.1\appsettings.json

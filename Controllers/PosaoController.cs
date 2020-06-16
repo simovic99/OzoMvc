@@ -11,7 +11,6 @@ using OzoMvc.ViewModels;
 using System.Text.Json;
 using OzoMvc.Extensions;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Lucene.Net.Support;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -314,7 +313,7 @@ namespace OzoMvc.Controllers
                 TempData[Constants.Message] = "Ne postoji posao s oznakom: " + Id;
                 TempData[Constants.ErrorOccurred] = true;
             }
-            return RedirectToAction(nameof(Index), new { page = page, sort = sort, ascending = ascending });
+            return RedirectToAction(nameof(Index), new { page, sort, ascending });
         }
 
         [HttpGet]

@@ -1,7 +1,13 @@
 @model PosaoFilter
     <form id="filterform" asp-action="Filter" method="post">
 
-     
+        <div class="form-group row">
+            <label asp-for="UslugaId" class="col-sm-2 col-form-label">Naziv usluge</label>
+            <input asp-for="UslugaId" type="hidden" class="form-control" data-autocomplete-placeholder="usluga" />
+
+            <div class="col-sm-4">
+                <input class="form-control" data-autocomplete="usluga" asp-for="NazivUsluge" />
+            </div></div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">TrajanjeOd</label>
                 <div class="col-sm-4">

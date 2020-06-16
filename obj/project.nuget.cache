@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "kUIYJUIlm8XE+ee4JOzmw+7O7rc72zsO6c5FcDuBEvC4vvNzWSz94m68HRqs099ZUGkBb492JncWEBYzymr0/Q==",
+  "dgSpecHash": "A5UfjJkqJRYhebk5zbIIc2QY79xNQLePsaf3NhrZ45jgzrxum49RqBZwEV28DWiiSwIdfMr2C6TiL/WLNfRm1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pero\\Desktop\\OzoMvc\\OzoMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pero\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\itextsharp.lgplv2.core\\1.6.2\\itextsharp.lgplv2.core.1.6.2.nupkg.sha512",
-    "C:\\Users\\Pero\\.nuget\\packages\\lucene.net\\3.0.3\\lucene.net.3.0.3.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
@@ -92,7 +91,6 @@
     "C:\\Users\\Pero\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Pero\\.nuget\\packages\\sharpziplib\\0.86.0\\sharpziplib.0.86.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
@@ -201,28 +199,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Lucene.Net 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Lucene.Net",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.CrmSdk.CoreAssemblies 9.0.2.24' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.CrmSdk.CoreAssemblies",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "SharpZipLib",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]
