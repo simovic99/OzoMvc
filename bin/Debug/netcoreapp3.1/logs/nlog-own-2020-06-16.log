@@ -42,3 +42,10 @@
 2020-06-16 12:58:14.1672|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
 2020-06-16 13:02:33.0902|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
 2020-06-16 13:03:09.8537|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-16 14:51:29.1131|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-16 17:04:11.0197|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-16 17:05:02.5224|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 68 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-16 17:05:30.4158|0|OzoMvc.Controllers.PosaoController|INFO|  Posao 66 uspješno obrisan |url: https://localhost/Posao/Delete?|action: Delete
+2020-06-16 20:16:45.7924|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-16 20:25:58.1286|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-16 20:30:23.4808|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 

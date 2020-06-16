@@ -42,38 +42,41 @@
     <tbody>
         @foreach (var natjecaj in Model.Natjecaji)
         {
-            <tr><td>@natjecaj.Id</td>
-                <td>@natjecaj.Opis</td>
-                <td >@natjecaj.TrajanjeOd.ToString("dd.MM.yyyy.")</td>
-                <td>@natjecaj.TrajanjeDo.ToString("dd.MM.yyyy.")</td>
-                <td >@natjecaj.Cijena.ToString("C2")</td>
-                    <td class="btn-group">
-                         <a asp-action="Show"
-                       asp-route-id="@natjecaj.Id"
-                       asp-route-page="@Model.PagingInfo.CurrentPage"
-                       asp-route-sort="@Model.PagingInfo.Sort"
-                       asp-route-ascending="@Model.PagingInfo.Ascending"
-                       asp-route-filter="@Model.Filter" class="btn btn-sm" title="Prikaži"><i class="fas fa-eye"></i>
-                     </a>
-                     <a asp-action="Edit"
-                         asp-route-id="@natjecaj.Id"
-                         asp-route-page="@Model.PagingInfo.CurrentPage"
-                         asp-route-ascending="@Model.PagingInfo.Ascending"
-                         asp-route-sort="@Model.PagingInfo.Sort" 
-                         asp-route-filter="@Model.Filter"        
-                        class="btn btn-sm" title="Ažuriraj"><i class="fas fa-edit"></i>
-                     </a>
-                     <form asp-action="Delete" method="post"
-                            asp-route-page="@Model.PagingInfo.CurrentPage"
-                            asp-route-sort="@Model.PagingInfo.Sort"
-                            asp-route-ascending="@Model.PagingInfo.Ascending"
-                            asp-route-filter="@Model.Filter">
-                          <input type="hidden" name="Id" value="@natjecaj.Id" />
-                         <button type="submit" class="btn btn-sm delete" title="Obriši"><i class="fa fa-trash" ></i></button>
-                     </form>
-                      </td>
-                
-            </tr>
+        <tr>
+            <td>@natjecaj.Id</td>
+            <td>@natjecaj.Opis</td>
+            <td>@natjecaj.TrajanjeOd.ToString("dd.MM.yyyy.")</td>
+            <td>@natjecaj.TrajanjeDo.ToString("dd.MM.yyyy.")</td>
+            <td>@natjecaj.Cijena KM</td>
+            <td class="btn-group">
+                <a asp-action="Show"
+                   asp-route-id="@natjecaj.Id"
+                   asp-route-page="@Model.PagingInfo.CurrentPage"
+                   asp-route-sort="@Model.PagingInfo.Sort"
+                   asp-route-ascending="@Model.PagingInfo.Ascending"
+                   asp-route-filter="@Model.Filter" class="btn btn-sm" title="Prikaži">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a asp-action="Edit"
+                   asp-route-id="@natjecaj.Id"
+                   asp-route-page="@Model.PagingInfo.CurrentPage"
+                   asp-route-ascending="@Model.PagingInfo.Ascending"
+                   asp-route-sort="@Model.PagingInfo.Sort"
+                   asp-route-filter="@Model.Filter"
+                   class="btn btn-sm" title="Ažuriraj">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form asp-action="Delete" method="post"
+                      asp-route-page="@Model.PagingInfo.CurrentPage"
+                      asp-route-sort="@Model.PagingInfo.Sort"
+                      asp-route-ascending="@Model.PagingInfo.Ascending"
+                      asp-route-filter="@Model.Filter">
+                    <input type="hidden" name="Id" value="@natjecaj.Id" />
+                    <button type="submit" class="btn btn-sm delete" title="Obriši"><i class="fa fa-trash"></i></button>
+                </form>
+            </td>
+
+        </tr>
         }
     </tbody>
 </table>

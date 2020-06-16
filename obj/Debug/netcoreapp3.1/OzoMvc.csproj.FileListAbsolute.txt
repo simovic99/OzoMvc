@@ -379,3 +379,4 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\OzoMvc.MvcApplicationPartsA
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Posao\KriterijPretrage.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ViewLog\Index.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\ViewLog\Show.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Report\Index.cshtml.g.cs
