@@ -389,3 +389,9 @@ C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Skladiste\Creat
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Skladiste\Index.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\VrstaOpreme\Create.cshtml.g.cs
 C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\VrstaOpreme\Index.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Certifikati\Create.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Certifikati\Edit.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\Certifikati\Index.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\KategorijaPoslova\Create.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\KategorijaPoslova\Edit.cshtml.g.cs
+C:\Users\Pero\Desktop\OzoMvc\obj\Debug\netcoreapp3.1\Razor\Views\KategorijaPoslova\Index.cshtml.g.cs

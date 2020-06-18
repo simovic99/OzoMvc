@@ -2,7 +2,7 @@
 
 @{
   ViewBag.Title = "Ažuriranje poslova";
-}
+}<div id="main">
 
     <form asp-route-page="@ViewBag.Page"
           asp-route-sort="@ViewBag.Sort"
@@ -41,7 +41,6 @@
         <div class="form-group">
             <label asp-for="OpremaId">Oprema</label>
             <select class="form-control" asp-for="OpremaId" asp-items="ViewBag.Oprema" multiple>
-
             </select>
 
 
@@ -53,15 +52,13 @@
         <div class="form-group">
             <label asp-for="ZaposlenikId">Zaposlenici</label>
             <select class="form-control" asp-for="ZaposlenikId" asp-items="ViewBag.Zaposlenici" multiple>
-            
-
             </select>
-            
-           
+
+
             <label asp-for="SatnicaZaposlenika">Satnica zaposlenika </label>
 
             <input type="time" class="form-control" asp-for="SatnicaZaposlenika" />
-            
+
 
         </div>
 
@@ -79,3 +76,4 @@
                class="btn btn-secondary">Odustani</a>
         </div>
     </form>
+    </div>

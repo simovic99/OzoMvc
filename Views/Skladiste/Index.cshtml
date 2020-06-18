@@ -4,16 +4,17 @@
 @{
     ViewBag.Title = "Skladiste";
 }
+    <div class="container">
+        <h2>Popis skladista</h2>
 
-<h2>Popis skladista</h2>
+        <a class="btn btn-secondary" style="margin-bottom:20px;" asp-action="Create">Unos novog skladista</a>
 
-<a asp-action="Create">Unos novog skladista</a>
-
-<pager page-info="@Model.PagingInfo" page-action="Index" page-title="Unesite željenu stranicu"
-       class="float-right">
-</pager>
-
-<table class="table table-sm table-striped table-hover">
+        <pager page-info="@Model.PagingInfo" page-action="Index" page-title="Unesite željenu stranicu"
+               class="float-right">
+        </pager>
+    </div>
+<div class="sec">
+    <table class="table table-sm table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -42,3 +43,4 @@
         }
     </tbody>
 </table>
+</div>

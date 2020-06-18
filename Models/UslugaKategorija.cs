@@ -10,6 +10,7 @@ namespace OzoMvc.Models
         public int UslugaId { get; set; }
 
         public virtual KategorijaPoslova KategorijaNavigation { get; set; }
+   
         public virtual Usluga Usluga { get; set; }
     }
 }
