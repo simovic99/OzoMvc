@@ -244,9 +244,8 @@ namespace OzoMvc.Models
                 entity.ToTable("oprema");
 
                 entity.Property(e => e.InventarniBroj)
-                    .HasColumnName("inventarni_broj")
-                    .ValueGeneratedNever();
-
+                    .HasColumnName("inventarni_broj");
+                   
                 entity.Property(e => e.KnjigovodstvenaVrijednost).HasColumnName("knjigovodstvena_vrijednost");
 
                 entity.Property(e => e.KupovnaVrijednost).HasColumnName("kupovna_vrijednost");
@@ -355,8 +354,8 @@ namespace OzoMvc.Models
                 entity.ToTable("referentni_tip");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                    
 
                 entity.Property(e => e.Cijena).HasColumnName("cijena");
 
@@ -371,8 +370,8 @@ namespace OzoMvc.Models
                 entity.ToTable("skladište");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                    .HasColumnName("id");
+                   
 
                 entity.Property(e => e.MjestoId).HasColumnName("mjesto_id");
                 entity.Property(e => e.Naziv).HasColumnName("naziv");

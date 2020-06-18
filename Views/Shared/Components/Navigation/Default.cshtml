@@ -20,6 +20,11 @@
          @(ViewBag.Controller == "Usluga" ? "active": "")"
            asp-action="Index" asp-controller="Usluga">Usluge</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link
+         @(ViewBag.Controller == "Oprema" ? "active": "")"
+           asp-action="Index" asp-controller="Oprema">Oprema</a>
+    </li>
     <li>
         <div class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle @(ViewBag.Controller == "Natjecaj" ? "active": "")"

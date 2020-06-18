@@ -1,0 +1,71 @@
+2020-06-18 14:00:20.3819|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:00:49.2137|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom dodavanje nove opreme: An error occurred while updating the entries. See the inner exception for details.
+Violation of PRIMARY KEY constraint 'PK_oprema'. Cannot insert duplicate key in object 'dbo.oprema'. The duplicate key value is (0).
+The statement has been terminated.
+ |url: https://localhost/Oprema/Create?|action: Create
+2020-06-18 14:02:01.4840|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:02:42.9324|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom dodavanje nove opreme: An error occurred while updating the entries. See the inner exception for details.
+Cannot insert the value NULL into column 'inventarni_broj', table 'PI-05.dbo.oprema'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Create?|action: Create
+2020-06-18 14:04:25.1394|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:04:26.6592|1000|OzoMvc.Controllers.OpremaController|INFO|  Oprema zvunck dodana. |url: https://localhost/Oprema/Create?|action: Create
+2020-06-18 14:04:50.7759|0|OzoMvc.Controllers.OpremaController|INFO|  Opream zvunck     uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:05:11.1791|1000|OzoMvc.Controllers.OpremaController|INFO|  Oprema Zvučnik dodana. |url: https://localhost/Oprema/Create?|action: Create
+2020-06-18 14:06:43.0742|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:09:03.2414|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:09:11.7390|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: The property 'InventarniBroj' on entity type 'Oprema' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:10:16.7475|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: The property 'InventarniBroj' on entity type 'Oprema' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:12:29.7674|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:12:47.3458|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: The property 'InventarniBroj' on entity type 'Oprema' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:13:53.0218|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: The property 'InventarniBroj' on entity type 'Oprema' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:15:08.5169|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:15:33.6402|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:16:54.1769|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:16:58.7972|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: The property 'InventarniBroj' on entity type 'Oprema' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:18:28.6894|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:18:36.6180|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 4 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:18:43.4560|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 3 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:22:28.3428|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:28:03.5980|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:28:26.6413|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 9 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:28:29.4851|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: An error occurred while updating the entries. See the inner exception for details.
+The DELETE statement conflicted with the REFERENCE constraint "FK_transakcija_oprema". The conflict occurred in database "PI-05", table "dbo.transakcija", column 'oprema_id'.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:28:41.3576|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: An error occurred while updating the entries. See the inner exception for details.
+The DELETE statement conflicted with the REFERENCE constraint "FK_transakcija_oprema". The conflict occurred in database "PI-05", table "dbo.transakcija", column 'oprema_id'.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:30:27.0849|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: An error occurred while updating the entries. See the inner exception for details.
+The DELETE statement conflicted with the REFERENCE constraint "FK_posao_oprema_oprema". The conflict occurred in database "PI-05", table "dbo.posao_oprema", column 'oprema_id'.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:30:30.6836|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: An error occurred while updating the entries. See the inner exception for details.
+The DELETE statement conflicted with the REFERENCE constraint "FK_posao_oprema_oprema". The conflict occurred in database "PI-05", table "dbo.posao_oprema", column 'oprema_id'.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:30:35.2734|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: An error occurred while updating the entries. See the inner exception for details.
+The DELETE statement conflicted with the REFERENCE constraint "FK_posao_oprema_oprema". The conflict occurred in database "PI-05", table "dbo.posao_oprema", column 'oprema_id'.
+The statement has been terminated.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:30:52.1893|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 5 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:30:55.5452|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 7 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:31:55.0931|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:38:24.8701|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:42:17.4873|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:44:11.7933|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 10 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:46:11.7566|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:47:00.9396|1000|OzoMvc.Controllers.PosaoController|INFO|  Posao 70 dodan. |url: https://localhost/Posao/Create?|action: Create
+2020-06-18 14:48:09.3286|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:49:18.7476|0|OzoMvc.Program|DEBUG|  init main |url: ?|action: 
+2020-06-18 14:49:20.4179|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 9 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:49:20.4409|0|OzoMvc.Controllers.OpremaController|ERROR|  Pogreška prilikom brisanja opreme: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+ |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:49:31.5624|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 10 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
+2020-06-18 14:50:27.0089|0|OzoMvc.Controllers.OpremaController|INFO|  Oprema 11 uspješno obrisana |url: https://localhost/Oprema/Delete?page=1,sort=1,ascending=True|action: Delete
